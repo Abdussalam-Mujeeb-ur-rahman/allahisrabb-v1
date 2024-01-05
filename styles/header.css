@@ -1,0 +1,372 @@
+/* ========================== MOVABLE ================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+:root {
+  /* =============== color ==================== */
+  --bg-color: #1f242d;
+  --bg-faint-color: #1f242d88;
+  --second-bg-color: #323946;
+  --text-color: #fff;
+  --main-color: #0ef;
+  --shadow-color: rgba(128, 128, 128, 0.371);
+
+  --header-z: 9999;
+
+  --section-min-height: 70rem;
+  --section-padding: 10rem 9% 2rem;
+  --section-padding-5-9-2: 5rem 9% 2rem;
+  --2rem-padding: 2rem;
+  --small-padding: 1rem;
+
+  --small-font: .5rem
+  --normal-font: 1rem;
+  --medium-font: 1.5rem;
+  --large-font: 2rem;
+}
+
+@media screen and (max-width: 299px) {
+  :root {
+    --small-font: 2vw !important;
+    --normal-font: 3vw !important;
+    --medium-font: 4vw !important;
+    --large-font: 5vw !important;
+
+    --small-padding: 2vw !important;
+  }
+
+  section:not(.certification) {
+    min-height: 150vw;
+  }
+}
+
+@media screen and (min-width: 690px) {
+  :root {
+    --small-font: 1rem;
+    --normal-font: 1.3rem;
+    --medium-font: 2rem;
+    --large-font: 2.5rem;
+  }
+}
+
+
+
+
+@media screen and (min-width: 800px) {
+  :root {
+    --section-padding: 10rem 3% 2rem;
+  }
+}
+
+/* ========================== MOVABLE ================== */
+
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+main {
+  max-width: 1500px;
+  padding: 0;
+  margin: 0 auto;
+  height: auto;
+}
+
+@media screen and (min-width: 1501px) {
+  main {
+    box-shadow: 3px 3px 6px 6px var(--main-color);
+  }
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  overflow-x: hidden;
+}
+
+section:not(.about, .work, .activities, .doings_container, .certification) {
+  min-height: var(--section-min-height);
+  padding: var(--section-padding);
+}
+
+
+/* =========================================== HEADER ===================================== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: var(--header-z);
+  padding: 1rem 9%;
+  background: var(--bg-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 2px 2px 2px var(--shadow-color);
+}
+.header.sticky {
+  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  font-size: 2.5rem;
+  color: var(--text-color);
+  font-weight: 600;
+  cursor: default;
+}
+
+.navbar {
+  position: absolute;
+  width: auto;
+  top: 100%;
+  right: -100%;
+  background-color: var(--second-bg-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: auto;
+  row-gap: 1.5rem;
+  padding: 4rem 2rem;
+  transition: right .4s;
+}
+
+.navbar.in{
+  right: 0;
+}
+
+.navbar a {
+  /* font-size: 1.7rem; */ 
+  font-size: 1.5rem;
+  color: var(--text-color);
+  /* margin-left: 4rem; */
+  border-bottom: none;
+  transition: color 0.3s, border-bottom .4s;
+}
+
+.navbar a:hover {
+  color: var(--main-color);
+  border-bottom: 2px solid var(--main-color);
+}
+
+.navbar a.active {
+  color: var(--main-color);
+}
+
+
+
+.harmburger {
+    width: 2rem;
+    position: relative;
+}
+
+.harmburger div {
+  width: 100%;
+  height: 2px;
+  background-color: var(--main-color);
+  position: relative;
+  top: 0;
+  transition: transform .4s, top .4s;
+}
+
+.harmburger div:not(.a) {
+  margin-top: .5rem;
+}
+
+.close div:nth-child(2) {
+  display: none;
+}
+
+.close div:first-child {
+  transform: rotate(90deg);
+}
+
+.close div:last-child {
+  position: relative;
+  top: -.8rem;
+}
+
+@media screen and (max-width: 299px) {
+  .logo {
+    font-size: 8vw;
+  }
+
+  .navbar a {
+    font-size: 4vw;
+  }
+}
+
+@media screen and (min-width: 900px) {
+
+  .harmburger {
+    display: none;
+  }
+
+  .header {
+    padding: .5rem 3%;
+  }
+
+  .navbar {
+    position: relative;
+    flex-direction: row;
+    height: auto;
+    width: auto;
+    right: 0;
+    top: 0;
+    background-color: transparent;
+    justify-content: space-between;
+    align-items: center;
+    width: 75%;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .navbar {
+    width: 70%;
+  }
+}
+
+/* ========================= common classes ============ */
+.section__title {
+  font-size: var(--large-font);
+  color: var(--main-color);
+}
+
+.section_subtitle {
+  font-size: var(--medium-font);
+  color: var(--shadow-color);
+}
+
+.section_with_title {
+  background-color: var(--second-bg-color);
+  padding: var(--section-padding-5-9-2);
+}
+
+.main_text_color {
+  color: var(--main-color);
+}
+
+.bold_text {
+  font-weight: bold;
+}
+
+.main_button {
+  padding: .5rem;
+  background-color: var(--main-color);
+}
+
+.bg_button {
+  padding: .5rem;
+  background-color: var(--bg-color);
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 1rem;
+  background-color: grey;
+  visibility: hidden;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--second-bg-color);
+}
+
+/* scroll-up */
+.scrollup {
+  bottom: 3rem;
+  position: fixed;
+  transition: all .5s;
+  z-index: 10;
+}
+
+.scrollup svg {
+  fill: var(--text-color);
+  height: 3rem;
+  animation-name: clickme;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  position: relative;
+  transition: all .5s;
+}
+
+@keyframes clickme {
+  0% {
+    top: 0;
+  }
+
+  50% {
+    top: -.5rem;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+
+.scrollup:hover svg {
+  fill: var(--main-color);
+}
+
+.scrollin {
+  right: 2rem;
+}
+.scrollout {
+  right: -100%;
+}
+
+@media screen and (max-width: 299px) {
+  .scrollup {
+    bottom: 8vw;
+  }
+  
+  .scrollup svg {
+    height: 10vw;
+  }
+  
+  @keyframes clickme {
+    0% {
+      top: 0;
+    }
+  
+    50% {
+      top: -.5vw;
+    }
+  
+    100% {
+      top: 0;
+    }
+  }
+
+  .scrollin {
+    right: 6vw;
+  }
+}
+
+@media screen and (min-width: 690px) {
+  
+  .scrollup svg {
+    height: 5rem;
+  }
+
+}
+@media screen and (min-width: 1000px) {
+  
+  .scrollup svg {
+    height: 7rem;
+  }
+
+}
