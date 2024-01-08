@@ -828,15 +828,19 @@
   right: var(--exprience-view-right);
   background-color: var(--bg-color);
   color: var(--main-color);
-  opacity: 0.3;
-  transition: opacity .4s;
+  opacity: 1;
+  transition: color .4s;
   padding: .3rem;
   border-radius: .5rem;
   font-size: var(--normal-font);
 }
 
-.experience:hover .experience_view {
-  opacity: 1;
+.experience_view a {
+  color: white;
+}
+
+.experience_view:hover  a{
+  color: var(--main-color);
 }
 
 .work_action_container {
@@ -1054,10 +1058,13 @@
 }
 
 .certificate a svg {
-  fill: var(--main-color);
+  fill: white;
   height: var(--certificate-svg);
 }
 
+.certificate a svg:hover {
+  fill: var(--main-color);
+}
 
 /* ==================== FOOTER ===================== */
 footer {

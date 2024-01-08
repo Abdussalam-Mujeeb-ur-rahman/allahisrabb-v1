@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+:root {
+    --bg-color: #1f242d;
+    --bg-faint-color: #1f242d88;
+    --second-bg-color: #323946;
+    --text-color: #fff;
+    --main-color: #0ef;
+    --shadow-color: rgba(128, 128, 128, 0.371);
+
+
+
+    /* padding */
+    --simple-padding: 1rem;
+
+    /* font-sizing */
+    --simple-font: .8rem;
+
+    /* arrow height */
+    --arrow-height: 1.5rem;
+
+    /* iframe props */
+    --iframe-height: 10rem;
+    --iframe-border-R: .3rem;
+    --iframe-border: 2px solid var(--main-color);
+
+    /* footer */
+    --small-font: .5rem;
+}
+
+/* ========================================================= media queries ======================================================================= */
+
+@media screen and (min-width: 400px) {
+    :root {
+        /* padding */
+        --simple-padding: 1rem;
+
+        /* font-sizing */
+        --simple-font: 1.2rem;
+
+        /* arrow height */
+        --arrow-height: 1.7rem;
+
+        /* iframe props */
+        --iframe-height: 15rem;
+
+            /* footer */
+    --small-font: .8rem;
+    }
+}
+
+@media screen and (min-width: 650px) {
+    :root {
+        /* padding */
+        --simple-padding: 1.5rem;
+
+        /* arrow height */
+        --arrow-height: 2rem;
+
+        /* iframe props */
+        --iframe-height: 20rem;
+
+            /* footer */
+    --small-font: 1rem;
+    }
+}
+
+
+@media screen and (min-width: 900px) {
+    :root {
+        /* padding */
+        --simple-padding: 2rem;
+
+        /* font-sizing */
+        --simple-font: 2rem;
+
+        /* arrow height */
+        --arrow-height: 3rem;
+
+        /* iframe props */
+        --iframe-height: 25rem;
+
+            /* footer */
+    --small-font: 1.2rem;
+    }
+}
+
+
+@media screen and (min-width: 1300px) {
+    :root {
+        /* padding */
+        --simple-padding: 3rem;
+
+        /* iframe props */
+        --iframe-height: 35rem;
+    }
+}
+
+
+
+
+@media screen and (min-width: 1501px) {
+    main {
+        border: 2px solid var(--main-color);
+    }
+}
+
+
+/* ============================= classes ===================================== */
+.main_color {
+    color: var(--main-color);
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    font-size: 56%;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+main {
+    padding: var(--simple-padding);
+    margin: 0;
+    max-width: 1500px;
+    font-size: var(--simple-font);
+    margin: 0 auto;
+}
+
+.arrow {
+    height: var(--arrow-height);
+    fill: var(--text-color);
+    animation-name: clickme;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transition: all .4s;
+}
+
+.arrow:hover {
+    fill: var(--main-color);
+}
+
+@keyframes clickme {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(.5rem);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+iframe {
+    height: var(--iframe-height);
+    border-radius: var(--iframe-border-R);
+    transition: all .4s;
+    border: var(--iframe-border);
+}
+
+footer {
+    font-size: var(--small-font);
+    text-align: center;
+    padding: var(--simple-padding);
+    background-color: var(--second-bg-color);
+}
