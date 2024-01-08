@@ -356,7 +356,7 @@ section:not(.about, .work, .activities, .doings_container, .certification) {
   }
 
   .header {
-    padding: .5rem 3%;
+    padding: 0 4rem;
   }
 
   .logo {
