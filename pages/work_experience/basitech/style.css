@@ -11,7 +11,7 @@
 
 
     /* padding */
-    --simple-padding: 1rem;
+    --simple-padding: 2rem;
 
     /* font-sizing */
     --simple-font: .8rem;
@@ -31,13 +31,34 @@
 
 /* ========================================================= media queries ======================================================================= */
 
+@media screen and (max-width: 299px) {
+    :root {
+        /* padding */
+        --simple-padding: 7vw;
+
+        /* font-sizing */
+        --simple-font: 4vw;
+
+        /* arrow height */
+        --arrow-height: 8vw;
+
+        /* iframe props */
+        --iframe-height: 55vw;
+        --iframe-border: .5vw solid var(--main-color);
+
+        /* footer */
+        --small-font: .5rem;
+        --small-padding: .5rem;
+    }
+}
+
 @media screen and (min-width: 400px) {
     :root {
         /* padding */
-        --simple-padding: 1rem;
+        --simple-padding: 2.5rem;
 
         /* font-sizing */
-        --simple-font: 1.2rem;
+        --simple-font: 1rem;
 
         /* arrow height */
         --arrow-height: 1.7rem;
@@ -46,7 +67,7 @@
         --iframe-height: 15rem;
 
         /* footer */
-        --small-font: .8rem;
+        --small-font: .6rem;
         --small-padding: 1rem;
     }
 }
@@ -54,7 +75,10 @@
 @media screen and (min-width: 650px) {
     :root {
         /* padding */
-        --simple-padding: 1.5rem;
+        --simple-padding: 2.5rem;
+
+        /* font-sizing */
+        --simple-font: 1.2rem;
 
         /* arrow height */
         --arrow-height: 2rem;
@@ -72,7 +96,10 @@
 @media screen and (min-width: 900px) {
     :root {
         /* padding */
-        --simple-padding: 2rem;
+        --simple-padding: 3rem;
+
+        /* font-sizing */
+        --simple-font: 1.5rem;
 
         /* iframe props */
         --iframe-height: 25rem;
@@ -84,10 +111,20 @@
 }
 
 
+@media screen and (min-width: 1000px) {
+    :root {
+        /* padding */
+        --simple-padding: 3.5rem;
+
+        /* arrow height */
+        --arrow-height: 3rem;
+    }
+}
+
 @media screen and (min-width: 1300px) {
     :root {
         /* padding */
-        --simple-padding: 3rem;
+        --simple-padding: 4rem;
 
         /* iframe props */
         --iframe-height: 35rem;
