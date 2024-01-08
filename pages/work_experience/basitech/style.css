@@ -26,6 +26,7 @@
 
     /* footer */
     --small-font: .5rem;
+    --small-padding: .5rem;
 }
 
 /* ========================================================= media queries ======================================================================= */
@@ -44,8 +45,9 @@
         /* iframe props */
         --iframe-height: 15rem;
 
-            /* footer */
-    --small-font: .8rem;
+        /* footer */
+        --small-font: .8rem;
+        --small-padding: 1rem;
     }
 }
 
@@ -60,8 +62,9 @@
         /* iframe props */
         --iframe-height: 20rem;
 
-            /* footer */
-    --small-font: 1rem;
+        /* footer */
+        --small-font: 1rem;
+        --small-padding: 1rem;
     }
 }
 
@@ -71,17 +74,12 @@
         /* padding */
         --simple-padding: 2rem;
 
-        /* font-sizing */
-        --simple-font: 2rem;
-
-        /* arrow height */
-        --arrow-height: 3rem;
-
         /* iframe props */
         --iframe-height: 25rem;
 
-            /* footer */
-    --small-font: 1.2rem;
+        /* footer */
+        --small-font: 1rem;
+        --small-padding: 1rem;
     }
 }
 
@@ -181,6 +179,6 @@ iframe {
 footer {
     font-size: var(--small-font);
     text-align: center;
-    padding: var(--simple-padding);
+    padding: var(--small-padding);
     background-color: var(--second-bg-color);
 }
