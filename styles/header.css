@@ -382,10 +382,6 @@ section:not(.about, .work, .activities, .doings_container, .certification) {
     font-size: 1.8rem;
   }
 
-  .scrollup svg {
-    height: 7rem;
-  }
-
 }
 
 

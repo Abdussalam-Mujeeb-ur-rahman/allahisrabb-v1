@@ -1,0 +1,314 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+:root {
+    --bg-color: #1f242d;
+    --bg-faint-color: #1f242d88;
+    --second-bg-color: #323946;
+    --text-color: black;
+    --main-color: #0ef;
+    --shadow-color: rgba(128, 128, 128, 0.371);
+}
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    font-size: 56%;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+main {
+    padding: 7vw;
+}
+
+.arrow {
+    fill: white;
+    height: 9vw;
+    transition: all .4s;
+}
+
+.arrow:hover {
+    fill: var(--main-color);
+}
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 100px auto;
+}
+
+.container {
+    padding: 10px 50px;
+    position: relative;
+    width: 50%;
+    animation: movedown 1s linear forwards;
+    opacity: 0;
+}
+
+.container:nth-child(1) {
+    animation-delay: 0s;
+}
+.container:nth-child(2) {
+    animation-delay: 1s;
+}
+.container:nth-child(3) {
+    animation-delay: 2s;
+}
+.container:nth-child(4) {
+    animation-delay: 3s;
+}
+.container:nth-child(5) {
+    animation-delay: 4s;
+}
+.container:nth-child(6) {
+    animation-delay: 5s;
+}
+
+@keyframes movedown {
+    0% {
+        opacity: 1;
+        transform: translateY(-30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container:nth-of-type(even) {
+    left: 50%;
+}
+
+.container:nth-of-type(odd) {
+    left: 0;
+}
+
+.container:nth-of-type(odd) .arrow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid white;
+    right: -15px;
+}
+
+.container:nth-of-type(even) .arrow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid white;
+    left: -15px;
+}
+
+.time {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    right: -20px;
+    top: 32px;
+    z-index: 10;
+    outline: 10px solid var(--bg-color);
+}
+
+.container:nth-of-type(even) .time {
+    left: -20px;
+}
+
+.text-box {
+    padding: 20px 30px;
+    background-color: #fff;
+    position: relative;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.text-box h2 {
+    font-weight: 600;
+}
+
+.text-box small {
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.line {
+    position: absolute;
+    width: 6px;
+    /* height: 1100px; */
+    background: #fff;
+    top: 80px;
+    left: 50%;
+    margin-left: -3px;
+    z-index: -1;
+    animation: moveline 6s linear forwards;
+}
+
+@keyframes moveline {
+    0% {
+        height: 0;
+    }
+
+    100% {
+        height: 80%;
+    }
+}
+
+
+
+@media screen and (max-width: 450px) {
+    main {
+        padding: 6vw !important;
+        font-size: 3.5vw !important;
+    }
+
+    .arrow {
+        height: 8vw ;
+    }
+
+    .timeline {
+        margin: 10vw auto ;
+    }
+
+    .container {
+        padding: 2vw 7vw ;
+        width: 100% ;
+    }
+
+    .container:nth-of-type(even) {
+        left: 0 !important;
+    }
+
+    .container .time {
+        left: -3vw !important;
+        width: 5vw !important;
+        height: 5vw !important;
+    }
+
+    .container .arrow {
+        top: 7vw;
+        z-index: 1;
+        border-top: 2vw solid transparent;
+        border-bottom: 2vw solid transparent;
+        border-right: 2vw solid white !important;
+        border-left: 0 !important;
+        left: -2.5vw !important;
+    }
+
+    .text-box {
+        padding: 4vw;
+        border-radius: 6px;
+        font-size: 3.5vw;
+    }
+
+    .line {
+        width: 1vw;
+        left: 6.1vw;
+        top: 34vw;
+    }
+
+    @keyframes moveline {
+        0% {
+            height: 0;
+        }
+    
+        100% {
+            height: 270vw;
+        }
+    }
+
+}
+
+@media screen and (min-width: 451px) {
+    .arrow {
+        height: 2rem;
+    }
+
+    main {
+        padding: 3rem;
+    }
+}
+
+
+@media screen and (min-width: 451px) and (max-width: 900px) {
+    main {
+        padding: 3rem;
+    }
+
+    .content {
+        position: relative;
+    }
+
+    .timeline {
+        margin: 40px auto;
+    }
+
+    .line {
+        left: 30px;
+        top: 80px;
+    }
+
+    @keyframes moveline {
+        0% {
+            height: 0;
+        }
+    
+        100% {
+            height: 80%;
+        }
+    }
+
+    .container {
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 25px;
+    }
+
+    .text-box {
+        font-size: 13px;
+    }
+
+    .text-box small {
+        margin-bottom: 10px;
+    }
+
+    .container:nth-of-type(even) {
+        left: 0;
+    }
+
+    .container .time {
+        left: 10px !important;
+    }
+
+    .container .arrow {
+        border-right: 15px solid white;
+        border-left: none !important;
+        left: -15px;
+    }
+}
+
+@media screen and (min-width: 901px) {
+    .content {
+        position: relative;
+    }
+}

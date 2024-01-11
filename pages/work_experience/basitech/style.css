@@ -116,8 +116,27 @@
         /* padding */
         --simple-padding: 3.5rem;
 
+        /* font-sizing */
+        --simple-font: 1.2rem;
+
         /* arrow height */
         --arrow-height: 3rem;
+
+        /* iframe props */
+        --iframe-height: 100%;
+    }
+
+    /* classes on large screens */
+    .grid2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr) !important;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .h100-large {
+        height: 100% !important;
     }
 }
 
@@ -182,9 +201,6 @@ main {
 .arrow {
     height: var(--arrow-height);
     fill: var(--text-color);
-    animation-name: clickme;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
     transition: all .4s;
 }
 
@@ -192,18 +208,8 @@ main {
     fill: var(--main-color);
 }
 
-@keyframes clickme {
-    0% {
-        transform: translateX(0);
-    }
-
-    50% {
-        transform: translateX(.5rem);
-    }
-
-    100% {
-        transform: translateX(0);
-    }
+li {
+    list-style-type: none;
 }
 
 iframe {
@@ -211,6 +217,7 @@ iframe {
     border-radius: var(--iframe-border-R);
     transition: all .4s;
     border: var(--iframe-border);
+    display: block;
 }
 
 footer {
