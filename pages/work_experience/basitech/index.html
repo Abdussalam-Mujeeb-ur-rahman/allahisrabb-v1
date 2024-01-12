@@ -179,20 +179,38 @@
             <b class="main_color">Error Handling</b> - Upon reviewing the error
             handling middleware crafted by my colleague, I sought ways to
             fortify security and safeguard against application disruptions.
-            Conducting a thorough examination of the implemented routes, I
-            identified an opportunity to enhance resilience by incorporating
+            Conducting a thorough examination of the implemented routes.
+          </p><br>
+          
+          <div class="grid2">
+            <p>
+           I identified an opportunity to enhance resilience by incorporating
             try-catch methods, thus minimizing the risk of breakdowns during
-            unforeseen scenarios. Additionally, I prioritized the implementation
+            unforeseen scenarios.
+            </p><br class="break">
+            <img src="../../../images/try-catch.png" alt="try-catch" class="image"><br class="break">
+          </div> <br>
+
+          <p>
+            Additionally, I prioritized the implementation
             of robust logging mechanisms and continuous monitoring to expedite
             the detection of potential lags within the application. It is
             crucial to acknowledge that these measures primarily address the
             backend, and our commitment to excellence remains steadfast. I
             remain open to exploring advanced error-handling techniques beyond
-            our existing expertise. I also added the Helmet library for
-            enhancing the security of the application. I am very sure that it
-            will help mitigate common web vulnerabilities and provide an
-            additional layer of defense against potential threats.
-          </p>
+            our existing expertise.
+          </p><br>
+
+          <div class="grid2">
+            <p>
+                I also added the Helmet library for
+              enhancing the security of the application. I am very sure that it
+              will help mitigate common web vulnerabilities and provide an
+              additional layer of defense against potential threats.
+            </p> <br class="break">
+
+            <img src="../../../images/helmet.png" alt="helmet" class="image"> <br class="break">
+          </div>          
         </li>
         <br /><br /><br />
 
@@ -207,7 +225,12 @@
             in cookies, I deliberated on a more secure strategy. Acknowledging
             the multitude of potential damages, ranging from XSS attacks to
             man-in-the-middle attacks, I sought to balance information
-            persistence with enhanced security measures. As a result, I chose to
+            persistence with enhanced security measures.
+          </p>
+
+          <div class="grid2">
+            <p>
+              As a result, I chose to
             implement the signed and httpOnly properties for the cookie. By
             doing so, I ensured that access to the cookie is restricted
             exclusively to HTTP requests, providing a robust defense against
@@ -215,16 +238,25 @@
             introduces an additional layer of security, enabling the server to
             verify the cookie's integrity upon its return and mitigating the
             risk of tampering during transit.
-          </p>
+            </p><br class="break">
+
+            <img src="../../../images/auth-jwt.png" alt="auth-jwt" class="image" />
+          </div>
         </li><br><br><br>
 
         <li>
           <p>
             <b class="main_color">Rate limiting</b> - My unending thirst for security led me to rate limiting. I implemented it to control the rate at which requests are made to the API per IP address, within a specific timeframe. I did this to prevent abuse, protect resources, and ensure fair usage of the application, protecting the server from overload and improving overall service reliability.
           </p><br>
-          <p>
-            Another reason I implemented rate limiting is to prevent brute-force attacks on user accounts. By limiting the number of login attempts within a specific timeframe, the system can thwart unauthorized attempts to gain access.
-          </p><br>
+
+          <div class="grid2">
+            <p>
+              Another reason I implemented rate limiting is to prevent brute-force attacks on user accounts. By limiting the number of login attempts within a specific timeframe, the system can thwart unauthorized attempts to gain access.
+            </p><br class="break">
+
+            <img src="../../../images/rate-limit.png" alt="rate-limit" class="image" /> <br class="break" />
+          </div><br />
+
           <p>
             While knowing that achieving 100% security is unattainable, my foremost commitment is to diligently implement measures that enhance the safety and security of the application for the users.
           </p>
@@ -233,27 +265,43 @@
         <li>
           <p>
             <b class="main_color">NotFound Router</b> - Anticipating instances where unfamiliar routes might be attempted to be accessed from the API, I considered potential risks of production breakdowns 🥲. Ensuring the resilience of this API in a production environment is paramount. To mitigate potential issues, I crafted a route to handle requests to non-existent routes or endpoints. This serves as a proactive fallback mechanism, managing situations where the requested resource is not found, thus contributing to the overall stability of the API in a production setting.
-          </p>
+          </p> <br />
+
+          <div class="grid2">
+            <img class="image" src="../../../images/notfound1.png" alt="notfound1" /> <br class="break" />
+            <img class="image" src="../../../images/notfound2.png" alt="notfound1" /> <br class="break" />
+          </div>
         </li><br><br><br>
 
         <li>
           <p>
             <b class="main_color">Testing and documentation with Postman</b> - How could I be certain that the code I penned, along with that of my colleague, didn't exhibit signs of mediocrity? It's not about claiming perfection or superiority, but rather emphasizing the importance of crafting functional code. Even though I acknowledge there's always room for improvement, I actively anticipate refactoring certain sections. To validate the reliability of the codebase, I carefully tested each route using Postman, ensuring flawless operation and error-free functionality. Once functionality was confirmed, I documented each route, providing thorough descriptions for safe and efficient utilization. The resulting documentation is tailored to ease API consumption for front-end developers, offering clear guidance for both effective and secure implementation.
-          </p>
+          </p><br/>
+
+          <div class="grid2">
+            <img src="../../../images/postman-test.png" alt="postman-test" class="image" /> <br class="break" />
+            <img src="../../../images/postman-test.png" alt="postman-test" class="image" /> <br class="break" />
+          </div>
         </li><br><br><br>
 
         <li>
-          <p>
-            <b class="main_color">Readme</b> - I assumed the responsibility of composing the README, providing thorough instructions on project initiation. I aimed to simplify the process for incoming developers, enabling them to set up the API on their local machines independently, guided solely by the README file.
-          </p>
+          <div class="grid2">
+            <p>
+              <b class="main_color">Readme</b> - I assumed the responsibility of composing the README, providing thorough instructions on project initiation. I aimed to simplify the process for incoming developers, enabling them to set up the API on their local machines independently, guided solely by the README file.
+            </p><br class="break" />
+            <img src="../../../images/readme.png" alt="readme" class="image" />
+          </div>
         </li><br><br><br>
       </ol>
       <br /><br /><br /><br />
 
         <li>
-          <p>
-            <b class="main_color">Deployment</b> - The API is currently hosted temporarily on the free tier of render, a unified cloud platform designed for running web applications and websites. This decision was made due to the startup's current lack of funds. Similarly, the database is also utilizing MongoDB's free tier.
-          </p>
+          <div class="grid2">
+            <p>
+              <b class="main_color">Deployment</b> - The API is currently hosted temporarily on the free tier of render, a unified cloud platform designed for running web applications and websites. This decision was made due to the startup's current lack of funds. Similarly, the database is also utilizing MongoDB's free tier.
+            </p><br class="break" />
+            <img src="../../../images/deploy.png" alt="deploy" class="image" />
+          </div>
         </li><br><br><br>
       </ol>
       <br /><br /><br /><br />
@@ -265,7 +313,5 @@
 
       <footer>made with 💓 by <b class="main_color">Allahisrabb</b></footer>
     </main>
-
-    <script src="script.js"></script>
   </body>
 </html>

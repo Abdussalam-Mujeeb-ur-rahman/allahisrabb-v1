@@ -135,6 +135,10 @@
         gap: 2rem;
     }
 
+    .break {
+        display: none;
+    }
+
     .h100-large {
         height: 100% !important;
     }
@@ -218,6 +222,10 @@ iframe {
     transition: all .4s;
     border: var(--iframe-border);
     display: block;
+}
+
+.image {
+    width: 100%;
 }
 
 footer {
