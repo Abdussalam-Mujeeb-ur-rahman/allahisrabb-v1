@@ -50,7 +50,9 @@ body {
 main {
     max-width: 1500px;
     margin: 0 auto;
+    padding-top: 5rem !important;
     padding: 0;
+    font-size: var(--normal-font);
 }
 
 
@@ -151,12 +153,42 @@ main {
 }
 
 
-/* ==================================== herosection ========================================= */
-.herosection {
-    /* border: 2px solid red; */
-    height: 500px;
+/* ============== body ================== */
+section {
+    padding: var(--section-padding-5-9-2);
+    height: auto;
+}
+
+.main-color {
+    color: var(--main-color);
+}
+
+.flex {
+    display: flex;
+}
+
+.j-center {
+    justify-content: center;
+}
+
+.a-center {
+    align-items: center;
+}
+
+.sm100-lg50 {
     width: 100%;
-    padding-top: 10%;
+}
+
+/* ============= footer ============== */
+footer {
+    padding: 2rem;
+    text-align: center;
+    background-color: var(--second-bg-color);
+    font-size: var(--normal-font);
+}
+
+footer b {
+    color: var(--main-color);
 }
 
 
@@ -217,6 +249,10 @@ main {
         --large-font: 3rem;
     }
 
+    main {
+        padding-top: 10rem !important;
+    }
+
     /* =========== header ============ */
 
     .harmburger {
@@ -264,6 +300,10 @@ main {
     .navbar a {
         font-size: 1.8rem;
     }
+
+    /* .sm100-lg50 {
+        width: 50%;
+    } */
 
 }
 
