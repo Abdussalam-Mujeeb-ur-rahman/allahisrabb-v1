@@ -199,6 +199,10 @@ body {
     color: var(--text-color);
 }
 
+a {
+    color: var(--main-color);
+}
+
 main {
     padding: var(--simple-padding);
     margin: 0;
