@@ -124,23 +124,11 @@
   --here-right: .8rem;
   --here-top: 15rem;
 
-  /* doings */
-
-  --doing_talks-svg-height: 2rem;
-
-  --doing-width: 13rem;
-  --doing-padding: 1rem;
-
-  --doing-svg-height: 5rem;
-  --doing-svg-translate: translateX(-2rem);
-
-  --view-box-top: 3rem;
-  --view-box-right: 1rem; 
-  --view-doing: 1.5rem;
-
   --certificate-a-top: 1rem;
   --certificate-a-right: 1rem;
   --certificate-svg: 2rem;
+
+  --doing_talks-svg-height: 1rem;
 }
 
 
@@ -237,9 +225,7 @@
     --here-right: .8rem;
     --here-top: 19rem;
 
-    --doing_talks-svg-height: 2.5rem;
-
-    --doing-width: 18rem;
+    --doing_talks-svg-height: 1.7rem;
   }
 }
 
@@ -334,22 +320,11 @@
     --here-right: 3rem;
     --here-top: 25rem;
 
-    /* doings */
-    --doing_talks-svg-height: 3rem;
-
-    --doing-width: 22rem;
-    --doing-padding: 2.5rem 1rem;
-
-    --doing-svg-height: 7rem;
-    --doing-svg-translate: translateX(-3rem);
-
-    --view-box-top: 35%;
-    --view-box-right: 2rem; 
-    --view-doing: 3rem;
-
     --certificate-a-top: 1rem;
     --certificate-a-right: 1rem;
     --certificate-svg: 3rem;
+
+    --doing_talks-svg-height: 1.8rem;
   }
 }
 
@@ -422,7 +397,7 @@
 
     --timeline-width: .8rem;
     --timeline-top: 9rem;
-    --timeline-height: 23rem;
+    --timeline-height: 27rem;
 
     --experience-view-top: 2rem;
 
@@ -439,13 +414,6 @@
 
     --here-right: 1rem;
 
-    /* doings */
-    --doing_talks-svg-height: 2rem;
-
-    --doing-width: 18rem;
-    --doing-padding: 1rem;
-
-    --view-box-right: 1rem;
   }
 }
 
@@ -506,6 +474,7 @@
 
     --learn-left: 7rem;
 
+    --doing_talks-svg-height: 2rem;
   }
 }
 
@@ -909,122 +878,6 @@
 
 
 
-
-/* ================== ACTIVITIES ======================= */
-.doings_container {
-  padding: var(--section-padding-5-9-2);
-}
-
-.doings_container .section__title {
-  margin-bottom: 4rem;
-}
-
-.doings_wrapper {
-  display: grid;
-  grid-template-columns: auto;
-  justify-content: center;
-  align-items: center;
-  row-gap: 6rem;
-  font-size: var(--normal-font);
-}
-
-.doings_talks {
-  display: flex;
-  flex-direction: column;
-  row-gap: 1rem;
-}
-
-.doings_talks .socials {
-  display: flex;
-  justify-content: flex-start;
-  gap: .5rem;
-}
-
-.doings_talks svg {
-  height: var(--doing_talks-svg-height);
-  z-index: 3;
-  fill: white;
-  transition: all .4s;
-}
-
-.doings_talks svg:hover {
-  fill: var(--main-color);
-  transform: translateY(1rem);
-}
-
-
-
-.doings_wrapper .doings_talks span {
-  color: var(--main-color);
-}
-
-.doings {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--bg-color);
-  gap: 1rem;
-  margin-bottom: 4rem;
-}
-
-.doing {
-  background-color: var(--second-bg-color);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: .5rem;
-  padding: var(--doing-padding);
-  width: var(--doing-width);
-  position: relative;
-  transition: all .4s;
-}
-
-.doing:hover {
-  box-shadow: 2px 2px 5px var(--main-color);
-  background-color: var(--bg-color);
-}
-
-.doing svg:not(.view_doing) {
-  height: var(--doing-svg-height);
-  margin-bottom: 1rem;
-  fill: var(--main-color);
-  transition: all .4s;
-}
-
-.doing:hover svg:not(.view_doing) {
-  transform: var(--doing-svg-translate);
-  fill: white;
-}
-
-.view_box {
-  position: absolute;
-  top: var(--view-box-top);
-  right: var(--view-box-right);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: all .4s;
-  cursor: pointer;
-}
-
-.view_box span {
-  color: var(--main-color);
-  font-size: var(--normal-font);
-}
-
-.doing:hover .view_box {
-  opacity: 1;
-}
-
-.view_doing {
-  height: var(--view-doing);
-  fill: var(--main-color);
-}
-
-
 /* ============== CERTIFICATE ================ */
 .certification .section__title {
   margin-bottom: 5rem;
@@ -1080,6 +933,24 @@ footer {
 
 footer b {
   color: var(--main-color);
+}
+
+footer .socials {
+  display: flex;
+  justify-content: center;
+  gap: .5rem;
+}
+
+footer svg {
+  height: var(--doing_talks-svg-height);
+  z-index: 3;
+  fill: white;
+  transition: all .4s;
+}
+
+footer svg:hover {
+  fill: var(--main-color);
+  transform: translateY(1rem);
 }
 
 
@@ -1266,10 +1137,10 @@ footer b {
   }
 
   .timeline {
-    width: 1vw;
+    width: 1.2vw;
     top: 22vw;
-    left: -5.5vw;
-    height: 90vw;
+    left: -5vw;
+    height: 70vw;
   }
 
   .time {
@@ -1324,65 +1195,6 @@ footer b {
     top: 50vw;
   }
 
-  /* doing */
-  .doings_container .section__title {
-    margin-bottom: 10vw;
-  }
-
-  .doings_wrapper {
-    row-gap: 15vw;
-    font-size: var(--normal-font);
-  }
-
-  .doings_talks {
-    row-gap: 2vw;
-  }
-
-  .doings_talks .socials {
-    gap: 1vw;
-  }
-
-  .doings_talks svg {
-    height: 5vw;
-  }
-
-  .doings_talks svg:hover {
-    transform: translateY(1vw);
-  }
-
-  .doings {
-    gap: 2vw;
-    margin-bottom: 5vw;
-  }
-
-  .doing {
-    border-radius: 1vw;
-    padding: 2.5vw;
-    width: 40vw;
-  }
-
-  .doing svg:not(.view_doing) {
-    height: 15vw;
-    margin-bottom: 1vw;
-  }
-
-  .doing:hover svg:not(.view_doing) {
-    transform: translateX(-7vw);
-  }
-
-  .view_box {
-    top: 7vw;
-    right: 1vw;
-  }
-
-  .view_box span {
-    font-size: 4vw;
-  }
-
-  .view_doing {
-    height: 6vw;
-  }
-
   /* certificate */
   #certification {
     padding-bottom: 40vw;
@@ -1421,7 +1233,19 @@ footer b {
     padding: 4vw;
   }
 
+  footer .socials {
+    gap: 1vw;
+  }
 
+  footer svg {
+    height: 5vw;
+  }
+
+  footer svg:hover {
+    transform: translateY(1vw);
+  }
+
+  
 }
 
 
@@ -1540,14 +1364,6 @@ footer b {
   .work_action div {
     font-size: 1.5rem;
   }
-
-  /* doings */
-  .doings_wrapper {
-    grid-template-columns: 1fr 1.5fr;
-    column-gap: 2rem;
-    justify-content: space-between;
-    font-size: 1.5rem;
-  }
 }
 
 
@@ -1636,43 +1452,15 @@ footer b {
     transition: background-color .4s, color .4s;
   }
 
-  /* doings */
-  .doings_wrapper {
-    grid-template-columns: 1fr 1.5fr;
-    column-gap: 2rem;
-    justify-content: space-between;
-  }
+  /* footer */
 
-  .doings_talks .socials {
+  footer .socials {
     gap: 1rem;
     margin-top: 1rem;
   }
 
-  .doings_talks svg {
+  footer svg {
     height: 2.3rem;
   }
-
-  .doing {
-    width: 18rem;
-  }
-
-  .doing:hover svg:not(.view_doing) {
-    transform: translateX(-4rem);
-  }
-
-  .view_box {
-    right: 2rem;
-    top: 35%;
-  }
-
-  .view_box span {
-    color: var(--main-color);
-    font-size: 1.7rem;
-  }
-
-  .view_box svg {
-    height: 2rem !important;
-  }
-
 
 }

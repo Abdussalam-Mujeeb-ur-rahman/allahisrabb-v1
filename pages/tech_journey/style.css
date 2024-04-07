@@ -198,6 +198,7 @@ main {
 
     .disclaimer {
         font-size: 3.5vw;
+        margin-top: 20vw;
     }
 
     .timeline {
@@ -251,6 +252,11 @@ main {
 
     main {
         padding: 3rem;
+    }
+
+    .disclaimer {
+        margin-top: 12rem;
+        padding: 2rem;
     }
 }
 
@@ -309,6 +315,10 @@ main {
 @media screen and (min-width: 901px) {
     .content {
         position: relative;
+    }
+    .disclaimer {
+        padding-right: 5rem;
+        padding-left: 5rem;
     }
 }
 
