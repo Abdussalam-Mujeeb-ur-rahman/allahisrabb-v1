@@ -22,6 +22,7 @@
   --second-bg-color: #323946;
   --text-color: #fff;
   --main-color: #0ef;
+  --main-faint-color: rgba(0, 238, 255, 0.539);
   --shadow-color: rgba(128, 128, 128, 0.371);
 
   --header-z: 9999;
@@ -79,6 +80,10 @@ section:not(.about, .work, .activities, .doings_container, .certification) {
   justify-content: space-between;
   align-items: center;
   box-shadow: 2px 2px 2px var(--shadow-color);
+}
+
+.header.others {
+  background: var(--second-bg-color) !important;
 }
 
 .header.sticky {
@@ -376,6 +381,10 @@ section:not(.about, .work, .activities, .doings_container, .certification) {
     justify-content: space-between;
     align-items: center;
     width: 75%;
+  }
+
+  .navbar.others {
+    background-color: transparent !important;
   }
 
   .navbar a {
