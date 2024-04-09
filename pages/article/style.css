@@ -67,7 +67,7 @@ h1 {
     
     .blog-wrapper {
         gap: 1rem;
-        font-size: 1.05rem;
+        font-size: 1.2rem;
         padding-bottom: .5rem;
         border-bottom: .1rem solid rgba(128, 128, 128, 0.3);
     }
@@ -89,7 +89,7 @@ h1 {
     }
 
     .blog-wrapper {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
     }
 }
 
@@ -109,11 +109,17 @@ h1 {
     }
 
     .blog-wrapper {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
     }
 
     .blog-wrappers {
         flex-direction: row;
         flex-wrap: wrap;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .blog-wrapper {
+        width: 600px;
     }
 }
