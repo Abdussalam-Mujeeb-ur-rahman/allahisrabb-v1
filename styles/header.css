@@ -133,6 +133,39 @@ section:not(.about, .work, .activities, .doings_container, .certification) {
   color: var(--main-color);
 }
 
+.navbar a b {
+  animation-name: glow;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes glow {
+  0% {
+    color: var(--text-color);
+  }
+
+  20% {
+    color: rgba(255, 0, 0, 0.775);
+  }
+
+  40% {
+    color: var(--main-color);
+  }
+
+  60% {
+    color: rgba(255, 102, 0, 0.742);
+  }
+
+  80% {
+    color: rgba(187, 255, 0, 0.755);
+  }
+
+  100% {
+    color: var(--text-color);
+  }
+}
+
 
 
 .harmburger {
